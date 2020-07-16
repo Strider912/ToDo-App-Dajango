@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} <title>Contact Us</title>  {% endblock title %}
+
+{% block content %}
+
+<div class="container"><br>
+
+    {% if task_obj.manager == user.request %}
+        <form method="POST" class="row"><br>
+            {% csrf_token %}
+            <label class="col-lg-2"> New Task</label>
+            <input type="text" class="form-control col-lg-6" name="task" placeholder="{{task.task}}" value="{{task.task}}" >
+            <button type="submit" class="btn btn-primary col-lg-2">Update Task</button>
+        </form><br>
+    {% else %}
+        <p> Access Restriced, You are not real user </p>
+    {% endif %}
+    
+
+</div>
+
+{% endblock content %}

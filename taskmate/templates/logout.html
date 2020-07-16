@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container"><br>
+    <h2>Logout - TaskMate</h2>
+
+    {% for messages in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{messages}}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+ 
+
+</div>
+
+{% endblock content %}
